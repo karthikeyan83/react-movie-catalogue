@@ -7,8 +7,8 @@ const MoviePoster = () => {
   const { selectedMovie } = useContext(MovieContext)
   return (
     <>
-      <h6 className="card-subtitle mb-2 text-muted">
-        <img src={selectedMovie.Poster} className="img-thumbnail" />
+      <h6 className="card-subtitle mb-2 text-muted" data-testid="movieposter">
+        <img src={selectedMovie?.Poster} alt="Logo" className="img-thumbnail" />
       </h6>
       <style jsx>
         {`

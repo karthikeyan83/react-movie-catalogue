@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const MovieLabel = () => {
   const { selectedMovie } = useContext(MovieContext)
   return (
-    <h3>{selectedMovie.Title}</h3>
+    <h3 data-testid="movietitle">{selectedMovie.Title}</h3>
   );
 };
 

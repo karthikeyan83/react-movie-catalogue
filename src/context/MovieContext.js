@@ -1,8 +1,8 @@
 import React, {
-  createContext, useEffect, useState,
+  createContext, useState,
 } from 'react';
 
-const MovieContext = createContext(null);
+const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
@@ -23,12 +23,4 @@ export const MovieProvider = ({ children }) => {
     </MovieContext.Provider>
   );
 };
-
-
-export const withLoader = Component => props => (
-  <MovieContext.Consumer>
-    {loader => <Component loader={loader} {...props} />}
-  </MovieContext.Consumer>
-);
-
 export default MovieContext;

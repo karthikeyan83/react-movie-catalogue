@@ -6,13 +6,13 @@ const MovieInfo = () => {
   const { selectedMovie } = useContext(MovieContext)
   return (
     <>
-    <div>
+    <div data-testid="movieyear">
       {selectedMovie.Year}
     </div>
-    <div>
+    <div data-testid="movieimdb">
       {selectedMovie.imdbID}
     </div>
-    <div>
+    <div data-testid="movietype">
       {selectedMovie.Type}
     </div>
     <style jsx>
